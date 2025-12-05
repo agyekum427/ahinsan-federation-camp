@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="index-page">
+
+<!-- ADMIN BUTTON -->
+<button id="adminBtn" class="admin-button">Admin</button>
+
+<h1 class="center">Ahinsan Federation Camp 2025</h1>
+<h1 class="center">Registration Form</h1>
+
+<form id="regForm">
+  <label>Name:</label>
+  <input type="text" id="name" required>
+
+  <label>Sex:</label>
+  <select id="sex" required>
+    <option value="">Select</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+  <label>Allergies:</label>
+  <input type="text" id="allergies">
+
+  <label>Phone Number:</label>
+  <input type="text" id="phone" required>
+
+  <label>Emergency Number:</label>
+  <input type="text" id="emergency" required>
+
+  <label>NHIS Number:</label>
+  <input type="text" id="nhis">
+
+  <label>Church:</label>
+  <input type="text" id="church" required>
+
+  <label>District:</label>
+  <input type="text" id="district" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
