@@ -46,11 +46,12 @@ body.index-page::before {
 form {
   width: 100%;
   max-width: 700px;
-  margin: 40px auto;
+  margin: 60px auto;
   background: rgba(255, 255, 255, 0.92);
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-sizing: border-box;
 }
 
 label {
@@ -201,16 +202,31 @@ button#downloadPDF:hover { background: #074a7c; }
 /* ==================== MOBILE RESPONSIVE =================== */
 @media screen and (max-width: 768px) {
   form {
-    margin: 20px 10px;
+    margin: 40px 15px;
     padding: 20px;
+    width: calc(100% - 30px);
   }
-  label { font-size: 14px; }
-  input, select { font-size: 14px; padding: 10px; }
-  button { font-size: 14px; padding: 10px 15px; }
-  .center { margin-top: 60px; font-size: 28px; }
-  .admin-button { padding: 8px 12px; font-size: 12px; top: 10px; right: 10px; }
 
-  #stats-box, #searchBox { width: 90%; }
+  input, select, button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .center {
+    margin-top: 50px;
+    font-size: 28px;
+  }
+
+  .admin-button {
+    padding: 8px 12px;
+    font-size: 12px;
+    top: 10px;
+    right: 10px;
+  }
+
+  #stats-box, #searchBox {
+    width: 90%;
+  }
 
   #dataTable {
     width: 100%;
@@ -219,8 +235,20 @@ button#downloadPDF:hover { background: #074a7c; }
     overflow-x: auto;
     display: block;
   }
-  #dataTable th, #dataTable td { padding: 10px 8px; font-size: 13px; }
+  #dataTable th, #dataTable td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
 
-  .sort-btn { padding: 7px 12px; font-size: 14px; margin: 5px 3px; }
-  button#downloadPDF { width: 90%; padding: 12px 0; font-size: 16px; }
+  .sort-btn {
+    padding: 7px 12px;
+    font-size: 14px;
+    margin: 5px 3px;
+  }
+
+  button#downloadPDF {
+    width: 90%;
+    padding: 12px 0;
+    font-size: 16px;
+  }
 }
