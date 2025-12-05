@@ -34,11 +34,11 @@ body.index-page::before {
   right: 15px;
   background: #444;
   color: white;
-  padding: 10px 15px;
+  padding: 14px 20px; /* bigger button */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px; /* bigger font */
   z-index: 1000;
 }
 
@@ -47,11 +47,12 @@ form {
   width: 100%;
   max-width: 700px;
   margin: 60px auto;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px 25px; /* taller form */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   box-sizing: border-box;
+  min-height: 600px; /* taller form height */
 }
 
 label {
@@ -63,7 +64,7 @@ label {
 
 input, select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -72,7 +73,7 @@ input, select {
 
 button {
   margin-top: 15px;
-  padding: 12px 20px;
+  padding: 14px 20px;
   background: #0b57a4;
   color: white;
   border: none;
@@ -202,26 +203,28 @@ button#downloadPDF:hover { background: #074a7c; }
 /* ==================== MOBILE RESPONSIVE =================== */
 @media screen and (max-width: 768px) {
   form {
-    margin: 40px 15px;
-    padding: 20px;
-    width: calc(100% - 30px);
+    width: 95%;           
+    margin: 30px auto;
+    padding: 30px 20px;   
+    min-height: 650px;    
   }
 
   input, select, button {
-    font-size: 16px;
-    padding: 12px;
+    width: 100%;
+    font-size: 17px;      
+    padding: 14px;        
   }
 
   .center {
     margin-top: 50px;
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .admin-button {
-    padding: 8px 12px;
-    font-size: 12px;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
+    padding: 14px 20px;
+    font-size: 16px;
   }
 
   #stats-box, #searchBox {
