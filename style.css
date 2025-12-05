@@ -1,5 +1,4 @@
 /* ===== BLURRED FULLSCREEN BACKGROUND ONLY ON INDEX.HTML ===== */
-
 body.index-page {
   margin: 0;
   padding: 0;
@@ -67,16 +66,18 @@ input, select {
   margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 16px;
 }
 
 button {
   margin-top: 15px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   background: #0b57a4;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .center {
@@ -84,4 +85,142 @@ button {
   color: #fff;
   margin-top: 90px;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
+}
+
+/* =================== ADMIN PAGE TABLE STYLE ================== */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 20px;
+  color: #222;
+}
+
+h1.center {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0b57a4;
+}
+
+#stats-box {
+  width: 60%;
+  margin: 10px auto 20px;
+  background: #f1f1f1;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 17px;
+  color: #333;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#searchBox {
+  width: 60%;
+  padding: 10px;
+  margin: 0 auto 20px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sort-btn {
+  padding: 8px 15px;
+  margin: 5px;
+  background: #0b57a4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(11, 87, 164, 0.5);
+  transition: background-color 0.3s ease;
+}
+.sort-btn:hover { background: #074a7c; }
+
+#dataTable {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#dataTable th, #dataTable td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 15px;
+  color: #444;
+}
+
+#dataTable th {
+  background-color: #0b57a4;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#dataTable tr:hover { background-color: #f0f8ff; }
+
+.action-btn {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.edit-btn { background: #0b57a4; }
+.edit-btn:hover { background: #074a7c; }
+.delete-btn { background: #d11a2a; }
+.delete-btn:hover { background: #a01520; }
+
+button#downloadPDF {
+  margin: 0 auto 20px;
+  display: block;
+  background: #0b57a4;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(11, 87, 164, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button#downloadPDF:hover { background: #074a7c; }
+
+/* ==================== MOBILE RESPONSIVE =================== */
+@media screen and (max-width: 768px) {
+  form {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+  label { font-size: 14px; }
+  input, select { font-size: 14px; padding: 10px; }
+  button { font-size: 14px; padding: 10px 15px; }
+  .center { margin-top: 60px; font-size: 28px; }
+  .admin-button { padding: 8px 12px; font-size: 12px; top: 10px; right: 10px; }
+
+  #stats-box, #searchBox { width: 90%; }
+
+  #dataTable {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+  }
+  #dataTable th, #dataTable td { padding: 10px 8px; font-size: 13px; }
+
+  .sort-btn { padding: 7px 12px; font-size: 14px; margin: 5px 3px; }
+  button#downloadPDF { width: 90%; padding: 12px 0; font-size: 16px; }
 }

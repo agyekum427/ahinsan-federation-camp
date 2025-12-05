@@ -7,144 +7,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-
-  <style>
-    body {
-      background: #fff;  /* Clean white background */
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      color: #222;
-    }
-
-    h1.center {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #0b57a4;
-      text-shadow: none;
-    }
-
-    #stats-box {
-      width: 60%;
-      margin: 10px auto 20px;
-      background: #f1f1f1;
-      padding: 12px;
-      text-align: center;
-      border-radius: 8px;
-      font-size: 17px;
-      color: #333;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-
-    #searchBox {
-      width: 60%;
-      padding: 10px;
-      margin: 0 auto 20px;
-      display: block;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .sort-btn {
-      padding: 8px 15px;
-      margin: 5px;
-      background: #0b57a4;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 3px 6px rgba(11, 87, 164, 0.5);
-      transition: background-color 0.3s ease;
-    }
-
-    .sort-btn:hover {
-      background: #074a7c;
-    }
-
-    button {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #dataTable {
-      width: 90%;
-      max-width: 1100px;
-      margin: 20px auto;
-      border-collapse: collapse;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    #dataTable th, #dataTable td {
-      padding: 12px 15px;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-      font-size: 15px;
-      color: #444;
-    }
-
-    #dataTable th {
-      background-color: #0b57a4;
-      color: white;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    #dataTable tr:hover {
-      background-color: #f0f8ff;
-    }
-
-    .action-btn {
-      padding: 5px 10px;
-      margin: 2px;
-      border: none;
-      cursor: pointer;
-      border-radius: 3px;
-      color: white;
-      font-size: 13px;
-      font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-    .edit-btn { background: #0b57a4; }
-    .edit-btn:hover { background: #074a7c; }
-    .delete-btn { background: #d11a2a; }
-    .delete-btn:hover { background: #a01520; }
-
-    button#downloadPDF {
-      margin: 0 auto 20px;
-      display: block;
-      background: #0b57a4;
-      padding: 10px 20px;
-      border-radius: 6px;
-      color: white;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(11, 87, 164, 0.5);
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button#downloadPDF:hover {
-      background: #074a7c;
-    }
-
-    /* Responsive */
-    @media screen and (max-width: 900px) {
-      #dataTable, #stats-box, #searchBox {
-        width: 95%;
-      }
-      #dataTable th, #dataTable td {
-        font-size: 13px;
-        padding: 8px 10px;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -165,23 +27,25 @@
 
 <button id="downloadPDF" onclick="downloadPDF()">Download PDF</button>
 
-<table id="dataTable">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Allergies</th>
-      <th>Phone</th>
-      <th>Emergency</th>
-      <th>NHIS</th>
-      <th>Church</th>
-      <th>District</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody id="users-table-body"></tbody>
-</table>
+<div style="overflow-x:auto;">
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Sex</th>
+        <th>Allergies</th>
+        <th>Phone</th>
+        <th>Emergency</th>
+        <th>NHIS</th>
+        <th>Church</th>
+        <th>District</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="users-table-body"></tbody>
+  </table>
+</div>
 
 <script src="script.js"></script>
 </body>

@@ -46,5 +46,17 @@
 </form>
 
 <script src="script.js"></script>
+<script>
+  // ADMIN BUTTON PASSWORD FUNCTION
+  const adminBtn = document.getElementById('adminBtn');
+  adminBtn.addEventListener('click', () => {
+    const password = prompt("Enter Admin Password:");
+    if(password === "youth camp 2025"){
+      window.location.href = "admin.html";
+    } else {
+      alert("Incorrect password");
+    }
+  });
+</script>
 </body>
 </html>
